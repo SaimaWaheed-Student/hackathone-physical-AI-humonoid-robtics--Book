@@ -29,4 +29,5 @@ html[data-theme='dark'] {
 
 .footer {
   background-color: var(--ifm-background-color);
+  color: #000000; /* Black text color for footer */
 }

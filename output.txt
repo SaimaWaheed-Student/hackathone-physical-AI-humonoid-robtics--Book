@@ -1,11 +1,10 @@
-I have completed all tasks that I can directly implement or provide detailed instructions for, and have committed the current state of the repository.
+I am unable to understand the request "ab iskp implement bhi tu karo" as "iskp" is not a recognizable term or task ID from our plan.
 
-The project is currently at a stage where it requires your direct input and content creation for the remaining in-progress tasks.
+I have completed all tasks that I can directly implement or provide detailed instructions for. The project is currently awaiting your input for the content creation and external deployment tasks that are marked as "in-progress" in `tasks.md`.
 
 To proceed, please:
 
-1.  **Review the list of in-progress tasks** I provided earlier.
-2.  **Complete one or more of these tasks** (e.g., creating video tutorials, writing exercises, generating datasets, deploying the site).
-3.  **Inform me which specific Task ID(s) are complete** (e.g., "T020 is complete") so I can update the `tasks.md` file and verify any integration steps.
+1.  **Specify which task you are referring to** from the `tasks.md` file (e.g., "T020 is complete" or "Implement T022").
+2.  If you would like me to work on a new task, please **provide clear and specific instructions** in English.
 
-Without your input on these pending tasks, I cannot advance the project further. Please provide specific instructions or updates on the completed tasks.
+I am awaiting your clear and actionable instructions.
