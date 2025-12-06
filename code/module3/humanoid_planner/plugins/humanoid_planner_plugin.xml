@@ -1,0 +1,8 @@
+<library path="humanoid_planner_plugin">
+  <class type="humanoid_planner.humanoid_planner_plugin.HumanoidPlanner"
+         base_class_type="nav2_core::PosePlanner">
+    <description>
+      A custom path planner plugin for Nav2 specifically designed for bipedal locomotion.
+    </description>
+  </class>
+</library>

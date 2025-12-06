@@ -1,0 +1,46 @@
+# Nav2 configuration for the humanoid robot
+
+# Controller Server parameters
+controller_server:
+  ros__parameters:
+    use_sim_time: true
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.001
+    
+    # Footprint of the humanoid robot
+    # This needs to be defined based on the robot's physical dimensions
+    # Format: [[x1, y1], [x2, y2], ...]
+    footprint: [[-0.2, -0.2], [-0.2, 0.2], [0.2, 0.2], [0.2, -0.2]] # Example square footprint
+
+# Planner Server parameters
+planner_server:
+  ros__parameters:
+    use_sim_time: true
+
+# Recovery Server parameters
+recovery_server:
+  ros__parameters:
+    use_sim_time: true
+
+# BT Navigator parameters
+bt_navigator:
+  ros__parameters:
+    use_sim_time: true
+
+# Waypoint Follower parameters
+waypoint_follower:
+  ros__parameters:
+    use_sim_time: true
+
+# Costmap filters
+# If you have specific filters (e.g., for legs), you would define them here.
+costmap_filters_info:
+  ros__parameters:
+    filter_mask_topic: /footprint_mask
+    filters: ["footprint_filter"]
+    footprint_filter:
+      type: "FootprintFilter"
+      parameters:
+        filter_footprint_border_size: 0.01
+

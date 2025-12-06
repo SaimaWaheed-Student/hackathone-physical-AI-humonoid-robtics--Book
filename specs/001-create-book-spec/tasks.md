@@ -57,14 +57,14 @@
 
 **Goal**: [US1] Write the content and [US3] create the AI and perception projects for the third module.
 
-- [ ] T036 [US1] Write the Isaac Sim installation guide (2000 words) as part of the Docker setup.
-- [ ] T037 [US3] Create a script to load the humanoid model as a USD file in Isaac Sim in `code/module3/isaac_sim_projects/`.
-- [ ] T038 [US3] Write a Python script for domain randomization to generate synthetic data in Isaac Sim.
-- [ ] T039 [US3] Generate a dataset of 5000 annotated images for object detection.
-- [ ] T040 [US3] Write a guide on training a YOLOv8 model on the generated synthetic data.
-- [ ] T041 [US3] Create a ROS 2 package to configure and run Isaac ROS nvblox for VSLAM in `code/module3/isaac_ros_slam/`.
-- [ ] T042 [US3] Create a ROS 2 package to configure Nav2 for the humanoid's footprint in `code/module3/humanoid_nav2/`.
-- [ ] T043 [US3] Implement a custom path planner plugin for Nav2 suitable for bipedal locomotion.
+- [X] T036 [US1] Write the Isaac Sim installation guide (2000 words) as part of the Docker setup.
+- [X] T037 [US3] Create a script to load the humanoid model as a USD file in Isaac Sim in `code/module3/isaac_sim_projects/`.
+- [X] T038 [US3] Write a Python script for domain randomization to generate synthetic data in Isaac Sim.
+- [>] T039 [US3] Generate dataset: 5000 annotated images.
+- [X] T040 [US3] Write a guide on training a YOLOv8 model on the generated synthetic data.
+- [X] T041 [US3] Create a ROS 2 package to configure and run Isaac ROS nvblox for VSLAM in `code/module3/isaac_ros_slam/`.
+- [X] T042 [US3] Create a ROS 2 package to configure Nav2 for the humanoid's footprint in `code/module3/humanoid_nav2/`.
+- [X] T043 [US3] Implement a custom path planner plugin for Nav2 suitable for bipedal locomotion.
 - [ ] T044 [P] [US2] Record and edit a video tutorial: "GPU-Accelerated Perception with Isaac ROS" (12 min).
 - [ ] T045 [US3] Create the capstone project: Have the humanoid navigate an environment with obstacles using the Nav2 stack.
 - [ ] T046 [P] [US1] Create 10 practice exercises with solutions for the Isaac module.
