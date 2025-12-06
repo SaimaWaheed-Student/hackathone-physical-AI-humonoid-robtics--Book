@@ -46,8 +46,8 @@
 - [X] T027 [US3] Add a simulated LiDAR sensor (Velodyne VLP-16) to the URDF and configure it in Gazebo.
 - [X] T028 [US3] Add a simulated RealSense D435 depth camera to the URDF and configure it in Gazebo.
 - [X] T029 [US3] Add a simulated IMU with configurable noise to the URDF.
-- [ ] T030 [P] [US2] Record and edit a video tutorial: "Tuning Physics Parameters in Gazebo" (8 min).
-- [ ] T031 [US1] Write the Unity setup guide: "ROS-Unity in 30 Minutes" in a new lesson file.
+- [>] T030 [P] [US2] Record and edit a video tutorial: "Tuning Physics Parameters in Gazebo" (8 min).
+- [X] T031 [US1] Write the Unity setup guide: "ROS-Unity in 30 Minutes" in a new lesson file.
 - [ ] T032 [US3] Configure the Unity ROS-TCP-Connector and demonstrate communication with the ROS 2 network.
 - [ ] T033 [US3] Create the capstone project: Test the robot's stability in 3 different Gazebo environments with varying physics.
 - [ ] T034 [P] [US1] Create 10 practice exercises with solutions for the simulation module.
