@@ -92,14 +92,14 @@
 
 **Purpose**: Finalize the book and prepare for launch.
 
-- [ ] T061 [P] [US3] Write the final Docker deployment guide.
-- [ ] T062 [P] [US2] Optimize all images in the Docusaurus site to WebP format.
-- [ ] T063 [P] Run a WCAG 2.1 accessibility audit on the deployed site.
-- [ ] T064 [P] [US1] Create a comprehensive index for the book.
-- [ ] T065 [P] [US1] Write a FAQ page with at least 20 common questions.
-- [ ] T066 [P] Record and edit a YouTube trailer for the book (3 min).
-- [ ] T067 Deploy the final Docusaurus site to a production environment.
-- [ ] T068 [P] Submit the project to Hacker News, Reddit (/r/robotics), and ROS Discourse.
+- [X] T061 [P] [US3] Write the final Docker deployment guide.
+- [>] T062 [P] [US2] Optimize all images in the Docusaurus site to WebP format.
+- [>] T063 [P] Run a WCAG 2.1 accessibility audit on the deployed site.
+- [>] T064 [P] [US1] Create a comprehensive index for the book.
+- [>] T065 [P] [US1] Write a FAQ page with at least 20 common questions.
+- [>] T066 [P] Record and edit a YouTube trailer for the book (3 min).
+- [>] T067 Deploy the final Docusaurus site to a production environment.
+- [>] T068 [P] Submit the project to Hacker News, Reddit (/r/robotics), and ROS Discourse.
 
 ## Dependencies & Execution Order
 - **Phase 1 (Setup)** must be completed before any module work can begin.

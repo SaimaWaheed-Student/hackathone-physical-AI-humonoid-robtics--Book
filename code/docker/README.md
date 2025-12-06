@@ -163,3 +163,84 @@ For Isaac ROS (covered in later lessons), you will typically run these component
 
 This comprehensive setup ensures you have a robust environment for exploring NVIDIA Isaac Sim's capabilities for AI and robotics development.
 
+## 6. Final Deployment Guide (Capstone Project)
+
+This section outlines how to bring up the entire Dockerized development environment for the book's capstone projects, combining the main ROS 2 container with an Isaac Sim container for full simulation capabilities.
+
+### 6.1. Build the Main ROS 2 Image
+
+First, ensure you have built the main ROS 2 Docker image. Navigate to this `code/docker` directory and run:
+
+```bash
+docker build -t physical-ai-robotics:latest .
+```
+
+### 6.2. Prepare Isaac Sim Image
+
+Follow the steps in section 5.2 to pull the NVIDIA Isaac Sim Docker image from NGC.
+
+### 6.3. Run the Main ROS 2 Development Container
+
+Start the main development container, ensuring it has GPU access and host networking for ROS 2 communication:
+
+```bash
+docker run -it --rm \
+  --gpus all \
+  --name physical-ai-robotics_dev \
+  --privileged \
+  --net=host \
+  -v "$(pwd)/../..:/workspace" \
+  physical-ai-robotics:latest \
+  bash
+```
+
+Once inside this container, source your ROS 2 environment and build your workspace:
+
+```bash
+source /opt/ros/humble/setup.bash
+cd /workspace/code
+colcon build --symlink-install
+source install/setup.bash
+```
+
+Keep this terminal open as your primary ROS 2 environment.
+
+### 6.4. Run the Isaac Sim Container
+
+In a separate terminal on your host machine, launch the Isaac Sim container. Ensure you mount the relevant code directories for Isaac Sim-specific projects.
+
+```bash
+# Example for a typical Linux desktop setup. Adjust display and paths as needed.
+docker run --name isaac-sim \
+  -e "ACCEPT_EULA=Y" \
+  --network=host \
+  --gpus all \
+  -e "PRIVACY_CONSENT=Y" \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -e DISPLAY=$DISPLAY \
+  -v ~/docker/isaac-sim/cache/ov:/root/.cache/ov:rw \
+  -v ~/docker/isaac-sim/cache/pip:/root/.cache/pip:rw \
+  -v ~/docker/isaac-sim/cache/glcache:/root/.cache/nvidia/GLCache:rw \
+  -v ~/docker/isaac-sim/cache/compute_cache:/root/.nv/ComputeCache:rw \
+  -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
+  -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
+  -v ~/docker/isaac-sim/documents:/root/.local/share/ov/documents:rw \
+  -v ~/docker/isaac-sim/settings:/root/.nvidia-omniverse/config:rw \
+  -v /path/to/your/workspace/code/module3:/workspace/code/module3:rw \
+  -v /path/to/your/workspace/code/module4:/workspace/code/module4:rw \ # Mount Module 4 code as well
+  -p 8888:8888 \ # Jupyter Lab
+  -p 8080:8080 \ # Web UI
+  -p 50000-50010:50000-50010/udp \ # ROS/ROS2 Bridge
+  nvcr.io/nvidia/isaac-sim:VERSION
+```
+**Remember to replace `/path/to/your/workspace/` with your actual project path.**
+
+### 6.5. Interacting between Containers (ROS 2 Bridge)
+
+With both containers running on `--net=host`, your ROS 2 nodes in the `physical-ai-robotics_dev` container can communicate with Isaac Sim's built-in ROS 2 Bridge.
+*   Isaac Sim will typically publish sensor data (e.g., camera, lidar, joint states) on ROS 2 topics.
+*   Your ROS 2 nodes can publish commands (e.g., joint commands, navigation goals) to Isaac Sim.
+
+This setup provides a complete, integrated environment for developing and testing complex AI and robotics applications, from perception to action.
+
+
