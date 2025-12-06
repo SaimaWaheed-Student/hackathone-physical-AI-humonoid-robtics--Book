@@ -126,12 +126,6 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'bookSidebar',
-          position: 'left',
-          label: 'Book',
-        },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
@@ -144,11 +138,23 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Book',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Module 1: ROS 2',
+              to: '/docs/category/module-1-the-robotic-nervous-system-ros-2',
+            },
+            {
+              label: 'Module 2: Simulation',
+              to: '/docs/category/module-2-the-digital-twin-gazebo-unity',
+            },
+            {
+              label: 'Module 3: Isaac AI',
+              to: '/docs/category/module-3-the-ai-robot-brain-nvidia-isaac',
+            },
+            {
+              label: 'Module 4: VLA',
+              to: '/docs/category/module-4-vision-language-action-vla',
             },
           ],
         },
