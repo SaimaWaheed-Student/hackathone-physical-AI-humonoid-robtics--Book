@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Physical AI and Humanoid Robotics',
+  tagline: 'A Hands-On Guide to Building Intelligent Humanoids',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -120,7 +120,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Physical AI and Humanoid Robotics',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -183,7 +183,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI Book Authors. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
