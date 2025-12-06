@@ -86,6 +86,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/book', // Make docs available at /book
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -126,6 +127,12 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'bookSidebar',
+          position: 'left',
+          label: 'Book',
+        },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
@@ -142,19 +149,19 @@ const config: Config = {
           items: [
             {
               label: 'Module 1: ROS 2',
-              to: '/docs/category/module-1-the-robotic-nervous-system-ros-2',
+              to: '/book/module1-ros2/lesson1',
             },
             {
               label: 'Module 2: Simulation',
-              to: '/docs/category/module-2-the-digital-twin-gazebo-unity',
+              to: '/book/module2-simulation/lesson1',
             },
             {
               label: 'Module 3: Isaac AI',
-              to: '/docs/category/module-3-the-ai-robot-brain-nvidia-isaac',
+              to: '/book/module3-isaac/lesson1',
             },
             {
               label: 'Module 4: VLA',
-              to: '/docs/category/module-4-vision-language-action-vla',
+              to: '/book/module4-vla/lesson1',
             },
           ],
         },
