@@ -1,0 +1,24 @@
+[project]
+name = "rag-chatbot"
+version = "0.1.0"
+description = "A RAG chatbot for the physical AI book website."
+readme = "README.md"
+requires-python = ">=3.10" # LangChain typically requires Python 3.8+
+dependencies = [
+    "Flask>=3.0.0",
+    "Flask-Cors>=4.0.0",
+    "python-dotenv>=1.0.0",
+    "langchain>=0.1.0",
+    "langchain-community>=0.0.1",
+    "langchain-google-genai>=0.0.1",
+    "unstructured>=0.11.0", # For markdown document loading
+    "chromadb>=0.4.0", # For local vector store
+    "sentence-transformers>=2.2.2", # For HuggingFaceEmbeddings
+    "pypdf>=4.0.0", # For PDF document loading (if needed, good to have)
+    "cohere>=5.2.0", # Keeping cohere in case user wants to switch back to cohere embeddings
+    "qdrant-client>=1.8.0", # Keeping qdrant in case user wants to switch back to qdrant vector store
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
