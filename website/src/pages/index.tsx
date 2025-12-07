@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import ModelViewer from '@site/src/components/ModelViewer';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
@@ -17,10 +18,13 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div style={{ margin: '20px auto', maxWidth: '500px', height: '300px' }}>
+          <ModelViewer src="/img/robot_arm.glb" alt="A 3D model of a robot arm" poster="/img/docusaurus.png" />
+        </div>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/book/module1-ros2/lesson1">
+            to="/docs/module1-ros2/lesson1">
             Start Reading the Book
           </Link>
         </div>
