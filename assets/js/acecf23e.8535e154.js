@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkwebsite=globalThis.webpackChunkwebsite||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/hackathone-physical-AI-humonoid-robtics--Book/blog","blogTitle":"Blog","authorsListPath":"/hackathone-physical-AI-humonoid-robtics--Book/blog/authors"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkwebsite=globalThis.webpackChunkwebsite||[]).push([[2691],{2358:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/hackathone-physical-AI-humonoid-robtics--Book/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
