@@ -11,7 +11,7 @@ export default function ChatbotWidget() {
   const [isExpanded, setIsExpanded] = useState(true);
   const messagesEndRef = useRef(null);
 
-  const API_BASE_URL = 'http://localhost:8002';
+  const API_BASE_URL = 'https://saimawaheedsaima5-backend-deploy.hf.space';
   const BOOK_ID = 'my-book';
 
   // Initialize chatbot on mount
