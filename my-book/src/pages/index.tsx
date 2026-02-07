@@ -2,6 +2,7 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
@@ -10,6 +11,7 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const robotHeroUrl = useBaseUrl('/img/robot-hero.svg');
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -35,7 +37,7 @@ function HomepageHeader() {
           </div>
           <div className={styles.heroImage}>
             <img
-              src="/img/robot-hero.svg"
+              src={robotHeroUrl}
               alt="Humanoid Robot"
               className={styles.robotImage}
             />
